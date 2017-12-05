@@ -6,7 +6,21 @@
   <script src="./app.js"></script>
 </head>
 <body>
-  <h1>Musicify Example Page</h1>
+  <div class ="wrapper">
+  <div id = "main">
+      <div id = "content-title">Musicify Example</div>
+      <div id = "content">
+        Every minute the app will request 0.02 eth from the subscribed user. 
+      </div>
+      <div id ="controls">
+        <div id = "subscribe"><button id='btn-subscribe' class="active">Subscribe</button></div>
+        <div id = "play"><button id='btn-play' class='inactive'>Play</button></div>
+        <div id = "add"><button id="btn-add">Add 1 eth</button></div>
+      </div>
+      <div id ="message"><h4>Subscribe to play</h4></div>
+  </div>
+</div>
+<!--  <h1>Musicify Example Page</h1>
   <h4>0.02 eth initial deposit, 1 eth every 2 blocks</h4>
   <h3>Subscribe to listen<span id="subscription"> <button id="send" onclick="App.subscribe()">Subscribe</button></span></h3>
   <br>
@@ -20,5 +34,6 @@
   <span id="status"></span>
   <br>
   <span class="hint"><strong>Hint:</strong> open the browser developer console to view any errors and warnings.</span>
+-->
 </body>
 </html>

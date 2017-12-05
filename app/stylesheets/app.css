@@ -1,52 +1,63 @@
-body {
-  margin-left: 25%;
-  margin-right: 25%;
-  margin-top: 10%;
-  font-family: "Open Sans", sans-serif;
+body,
+html {
+    height: 100%;
 }
 
-label {
-  display: inline-block;
-  width: 100px;
+body>* {
+    font-family: sans-serif;
+    font-size: 14px;
 }
 
-input {
-  width: 500px;
-  padding: 5px;
-  font-size: 16px;
+.wrapper {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    margin-top: 10%;
 }
 
-button {
-  font-size: 16px;
-  padding: 5px;
+#main {
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    height: 400px;
+    width: 417px;
+    flex-direction: column;
+    justify-content: left;
 }
 
-h1, h2 {
-  display: inline-block;
-  vertical-align: middle;
-  margin-top: 0px;
-  margin-bottom: 10px;
+#content-title {
+    flex: 1;
+    font-size: 72px;
+    font-weight: 700;
 }
 
-h2 {
-  color: #AAA;
-  font-size: 32px;
+#content {
+    padding: 10px;
+    flex: 1;
+    font-size: 18px;
+    font-weight: lighter;
 }
 
-h3 {
-  font-weight: normal;
-  color: #AAA;
-  font-size: 24px;
+#controls {
+    display:flex;
+    flex-direction: row;
+    flex: 1;
+    padding: 10px;
 }
 
-.black {
-  color: black;
+#add {
 }
 
-#balance {
-  color: black;
+#play {
+    text-align:center;
 }
 
-.hint {
-  color: #666;
+#subscribe {
+}
+
+#message {
+  flex: 5;
+  padding:10px;
 }
