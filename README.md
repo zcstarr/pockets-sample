@@ -40,8 +40,6 @@ The sample app creates a dApp that uses Pockets to allow users to subscribe to a
 
 There is a backend api server that connects via RPC to local node(testRPC). It serves as an interface for a script that polls to collect payements from pockets. The api server also returns an accessToken to a user if the terms of the subscription are still satisified. As long as the user has a pocket balance, the user will be able to continue playing music.
 
-
-
 ## Metamask Tricks and potential Gotchas
 https://github.com/MetaMask/metamask-extension/issues/1999
 
