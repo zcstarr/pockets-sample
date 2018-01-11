@@ -12,7 +12,7 @@
   "author": "Douglas von Kohorn",
   "dependencies": {
     "cors": "^2.8.4",
-    "smart-pockets": "git+ssh://git@github.com:zcstarr/smart-pockets.git#3ed7d4f6ce83f3e5a7f4da5a560baef13716b7f3"
+    "smart-pockets": "git+ssh://git@github.com:zcstarr/smart-pockets.git#9d781fa031cd45bbb16ca592465ae4e998c3c442"
   },
   "devDependencies": {
     "babel-cli": "^6.22.2",
@@ -35,7 +35,7 @@
     "json-loader": "^0.5.4",
     "style-loader": "^0.13.1",
     "truffle-contract": "^1.1.11",
-    "web3": "^0.20.0",
+    "web3": "^0.20.2",
     "webpack": "^2.2.1",
     "webpack-dev-server": "^2.3.0"
   }

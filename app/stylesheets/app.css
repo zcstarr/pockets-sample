@@ -41,23 +41,21 @@ body>* {
 }
 
 #controls {
-    display:flex;
+    display: flex;
     flex-direction: row;
     flex: 1;
     padding: 10px;
 }
 
-#add {
-}
+#add {}
 
 #play {
-    text-align:center;
+    text-align: center;
 }
 
-#subscribe {
-}
+#subscribe {}
 
 #message {
-  flex: 5;
-  padding:10px;
+    flex: 5;
+    padding: 10px;
 }

@@ -1,5 +1,5 @@
-const Web3 = require('web3');
 const truffleContractFactory = require('truffle-contract');
+const { web3 } = require('./util');
 
 
 const PocketsJson = require('../../build/contracts/Pockets.json');
@@ -7,27 +7,23 @@ const PocketsHubJson = require('../../build/contracts/PocketsHub.json');
 const RegistryJson = require('../../build/contracts/Registry.json');
 const ServiceJson = require('../../build/contracts/Service.json');
 const MusicfyAppJson = require('../../build/contracts/MusicifyApp.json');
+const TestJson = require('../../build/contracts/Test.json');
 
 const Pockets = truffleContractFactory(PocketsJson);
 const Service = truffleContractFactory(ServiceJson);
 const PocketsHub = truffleContractFactory(PocketsHubJson);
 const Registry = truffleContractFactory(RegistryJson);
 const MusicifyApp = truffleContractFactory(MusicfyAppJson);
+const Test  = truffleContractFactory(TestJson);
 
-let web3;
-let provider;
-
-if (!web3){
-  provider = new Web3.providers.HttpProvider('http://localhost:9545');
-  web3 = new Web3(provider);
-}
+let provider = web3.currentProvider;
 
 web3.eth.getAccountsPromise = () =>
   new Promise((resolve, reject) =>
     web3.eth.getAccounts((error, accounts) =>
       error ? reject(error) : resolve(accounts)));
 
-[Pockets, Service, PocketsHub, Registry, MusicifyApp]
+[Pockets, Service, PocketsHub, Registry, MusicifyApp, Test]
   .forEach(contract => contract.setProvider(provider));
 
 module.exports = {
@@ -37,4 +33,5 @@ module.exports = {
   Registry,
   Service,
   MusicifyApp,
+  Test,
 };
