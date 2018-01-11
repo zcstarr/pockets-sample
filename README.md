@@ -36,15 +36,17 @@ Launch web browser
 ```
 
 ## What's it do? 
-The sample app creates a dapp that uses the PocketHub, and allows
-users to subscribe to the music service. The music service consists of a 
-web3 fronted, that allows users to access their pocket and deposit money into the service. The backend api connects via web3 and grants an accessToken 
-to the user based on if the most recent valid attempt at pulling funds succeeds. The shell script, will periodically poll the api to allow users that
-are fully funded to never suffer an interruption in service.
+The sample app creates a dApp that uses Pockets to allow users to subscribe to a mock music service. The music service consists of a web3 frontend that allows users to create a pocket to fund access to the music service.
+
+There is a backend api server that connects via RPC to local node(testRPC). It serves as an interface for a script that polls to collect payements from pockets. The api server also returns an accessToken to a user if the terms of the subscription are still satisified. As long as the user has a pocket balance, the user will be able to continue playing music.
+
+
 
 ## Metamask Tricks and potential Gotchas
 https://github.com/MetaMask/metamask-extension/issues/1999
+
 https://github.com/MetaMask/metamask-extension/issues/2393
+
 More potential metamask issues are potentially resolved by closing and reopening all windows after switching network you could have a metamask caching problem.
 
 ## License
