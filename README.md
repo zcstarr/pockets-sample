@@ -22,11 +22,19 @@ yarn webpack-dev
 
 In yet another term
 Read the output from the migration  
+<<<<<<< HEAD
 ```sh
 node ./api/server --hub hubAddress --service serviceAddress
 ```
 Next we start a script to collect payment from expiring pockets every 30 seconds
 ```sh
+=======
+```sh
+node ./api/server --hub hubAddress --service serviceAddress
+```
+Next we start a script to collect payment from expiring pockets every 30 seconds
+```sh
+>>>>>>> First working commit of pockets-sample app end to end
 source api/collect.sh
 ```
 
@@ -42,7 +50,6 @@ There is a backend api server that connects via RPC to local node(testRPC). It s
 
 ## Metamask Tricks and potential Gotchas
 https://github.com/MetaMask/metamask-extension/issues/1999
-
 https://github.com/MetaMask/metamask-extension/issues/2393
 
 More potential metamask issues are potentially resolved by closing and reopening all windows after switching network you could have a metamask caching problem.
