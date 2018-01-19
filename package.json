@@ -12,12 +12,12 @@
   "author": "Douglas von Kohorn",
   "dependencies": {
     "cors": "^2.8.4",
-    "smart-pockets": "git+ssh://git@github.com:zcstarr/smart-pockets.git#9d781fa031cd45bbb16ca592465ae4e998c3c442"
+    "smart-pockets": "git+ssh://git@github.com:zcstarr/smart-pockets.git#a3adda4afa7fcda273a455b01d24685590be5146"
   },
   "devDependencies": {
     "babel-cli": "^6.22.2",
     "babel-core": "^6.22.1",
-    "babel-eslint": "^6.1.2",
+    "babel-eslint": "^8.2.1",
     "babel-loader": "^6.2.10",
     "babel-plugin-transform-runtime": "^6.22.0",
     "babel-preset-env": "^1.1.8",
@@ -25,11 +25,11 @@
     "babel-register": "^6.22.0",
     "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.26.1",
-    "eslint": "^3.14.0",
+    "eslint": "^4.15.0",
     "eslint-config-standard": "^6.0.0",
     "eslint-plugin-babel": "^4.0.0",
     "eslint-plugin-mocha": "^4.8.0",
-    "eslint-plugin-promise": "^3.0.0",
+    "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^2.0.0",
     "html-webpack-plugin": "^2.28.0",
     "json-loader": "^0.5.4",
