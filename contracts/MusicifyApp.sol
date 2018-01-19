@@ -25,7 +25,6 @@ contract MusicifyApp{
       public 
     {
         owner = msg.sender;
-        // Create a pocket hub 
         pocketsHub = PocketsHub(hubAddress);
         serviceAddress = svcAddress;
     }
