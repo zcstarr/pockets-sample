@@ -36,7 +36,21 @@ const advanceBlock = () => {
   });
 };
 
+const getEventArgs = (event) => {
+  return new Promise((resolve, error) => {
+    event.watch((err, result) => {
+      console.log('watched');
+      if (err) {
+        console.warn(`Error ${err}`)
+        error();
+      }
+      resolve(result.args);
+    })
+  });
+};
+
 module.exports = {
+  getEventArgs,
   web3,
   startMining,
   stopMining,
