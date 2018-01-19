@@ -1,14 +1,12 @@
 const MusicifyApp = artifacts.require("./MusicifyApp.sol");
 const PocketsHub = artifacts.require("./PocketsHub.sol");
-const Service = artifacts.require("./Service.sol");
 const Registry = artifacts.require("./Registry.sol");
-const Test = artifacts.require("./Test.sol");
 
 const getServiceEvent = (event) => {
-  return new Promise((resolve, error) => {
+  return new Promise((resolve, reject) => {
     event.watch((err, result) => {
       if (err)
-        error(err);
+        reject(err);
       event.stopWatching();
       resolve(result.args);
     })
@@ -45,13 +43,8 @@ module.exports = function (deployer) {
       })
       .then(() => {
         console.log(`node app/api/server.js --hub ${PocketsHub.address} --service ${service}`)
-//        return Service.at(service).transferOwnership(MusicifyApp.address)
-      }).then(()=>{
-
-        return deployer.deploy(Test);
       });
-
   }).catch((e) => {
-    console.log(e);
+    console.error(e);
   })
 };
