@@ -21,20 +21,14 @@ yarn webpack-dev
 ```
 
 In yet another term
-Read the output from the migration  
-<<<<<<< HEAD
+
+Read the output from the migration and copy the following command from the output:  
+
 ```sh
 node ./api/server --hub hubAddress --service serviceAddress
 ```
 Next we start a script to collect payment from expiring pockets every 30 seconds
 ```sh
-=======
-```sh
-node ./api/server --hub hubAddress --service serviceAddress
-```
-Next we start a script to collect payment from expiring pockets every 30 seconds
-```sh
->>>>>>> First working commit of pockets-sample app end to end
 source api/collect.sh
 ```
 
