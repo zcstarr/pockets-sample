@@ -85,12 +85,16 @@ const play = async () => {
   return fetch(`http://localhost:3000/play?token=${appMeta.token}`, { method: "POST" })
     .then((response) => response.json())
     .then(({ message }) => {
-      console.log(message)
-    });
+      document.getElementById('message').innerHTML = `<h4>Simulating: ${message}</h4>`;
+    })
+    .catch((e)=>{
+      console.error(e);
+      document.getElementById('message').innerHTML = `<h4>Error: Try requesting new access token or depositing eth`;
+    })
 }
 
 const addToPocketBalance = async () => {
-  const pocket = musicApp.pocket;
+  const { pocket } = appMeta;
   if (pocket !== 0)
     return await web3.eth.sendTransaction({ to: pocket, from: account, value: web3.toWei(1, 'ether') })
   console.error('Could not execute transaction without a pocket address');
