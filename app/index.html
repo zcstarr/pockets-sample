@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Musicfy - Pockets Subscription Example</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <script src="./app.js"></script>
+</head>
+<body>
+  <div class ="wrapper">
+  <div id = "main">
+      <div id = "content-title">Musicify Example</div>
+      <div id = "content">
+        Every minute the app will request 0.02 eth from the subscribed user. 
+      </div>
+      <div id ="controls">
+        <div id = "subscribe "><button onclick='App.subscribe()' id='btn-subscribe' class="active">Subscribe</button></div>
+        <div id = "access"><button id='btn-play'  onClick ='App.access()', class='inactive'>Access Token</button></div>
+        <div id = "play"><button id='btn-play'  onClick ='App.play()', class='inactive'>Play</button></div>
+        <div id = "add"><button id="btn-add" onClick='App.addToPocketBalance()'>Add 1 eth</button></div>
+      </div>
+      <div id ="message"><h4>Subscribe to play</h4></div>
+      <div id ="balance"></div>
+  </div>
+</div>
+</body>
+</html>

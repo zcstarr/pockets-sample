@@ -1,0 +1,61 @@
+body,
+html {
+    height: 100%;
+}
+
+body>* {
+    font-family: sans-serif;
+    font-size: 14px;
+}
+
+.wrapper {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    margin-top: 10%;
+}
+
+#main {
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    height: 400px;
+    width: 417px;
+    flex-direction: column;
+    justify-content: left;
+}
+
+#content-title {
+    flex: 1;
+    font-size: 72px;
+    font-weight: 700;
+}
+
+#content {
+    padding: 10px;
+    flex: 1;
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+#controls {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    padding: 10px;
+}
+
+#add {}
+
+#play {
+    text-align: center;
+}
+
+#subscribe {}
+
+#message {
+    flex: 5;
+    padding: 10px;
+}
